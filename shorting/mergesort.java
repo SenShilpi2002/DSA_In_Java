@@ -29,6 +29,9 @@ public class mergesort{
         }
     }
     public static void divide(int arr[],int si,int ei){
+        if(si>=ei){
+            return;
+        }
         int mid=si+(ei-si)/2;
         divide(arr,si,mid);
         divide(arr,mid+1,ei);
@@ -37,11 +40,16 @@ public class mergesort{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array ");
-        int n=nextInt();
+        int n=sc.nextInt();
+        int arr[]=new int[n];
         System.out.println("enter the array elements ");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
         divide(arr,0,n-1);
         for(int i=0;i<n;i++){
-            System.out.println();
+           System.out.println(arr[i]+" ");
+           
         }
     System.out.println();
     }
