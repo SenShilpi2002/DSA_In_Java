@@ -26,7 +26,7 @@ public class singlyLL{
 
     public static void display(node head){
         node temp=head;         //only given the head  and printing the whole linked list
-        while(temp=!=null){
+        while(temp!=null){
             System.out.print(temp.data+" ");
             temp=temp.next;
         }
