@@ -103,7 +103,19 @@ public class doublyll {
         }
 
 
-
+    public static void deleteHead(int idx) {
+        node temp = head;
+        if(idx==0){
+            temp = temp.next;
+            temp.prev = null;
+            return;
+        }
+        while(temp.next!=null){
+            temp = temp.next;
+        }
+        temp = temp.prev;
+        temp.next = null;
+    }
 
     public static void main(String[] args) {
         //4 56 12 7 6
