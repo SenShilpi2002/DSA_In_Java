@@ -117,7 +117,7 @@ public class implementation {
         if(idx==0){
             head=head.next;
             return;
-        }
+         }
         for(int i=1;i<idx-1;i++){
             temp=temp.next;
         }
