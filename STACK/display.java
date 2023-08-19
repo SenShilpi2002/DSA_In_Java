@@ -12,15 +12,46 @@ public class display {
         st.push(5);
         st.push(6);
         //System.out.println(st);
-        Stack<Integer> rt = new Stack<>();
-        while(st.size()>0){
-           rt.push(st.pop());
+        // Stack<Integer> rt = new Stack<>();
+        // while(st.size()>0){
+        //    rt.push(st.pop());
+        // }
+        // while(rt.size()>0){
+        //     int x = rt.pop();
+        //     System.out.println(x+" ");
+        //     st.push(x);
+        // }
+        // System.out.println(st);
+
+
+        //by using array
+        int n = st.size();
+        int arr[] = new int [n];
+        for(int i=n-1;i>=0;i++){
+            arr[i] = st.pop();
         }
-        while(rt.size()>0){
-            int x = rt.pop();
-            System.out.println(x+" ");
-            st.push(x);
+
+        for(int i=0;i<n;i++){
+            System.out.println(arr[i]+" ");
+            st.push(arr[i]);
         }
-        System.out.println(st);
+
     }
 }
+
+
+
+
+//call stack->
+
+
+
+
+
+
+
+
+
+
+
+
