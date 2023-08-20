@@ -8,7 +8,7 @@ public class arrayImplementation {
         private int[] arr = new int[10];
         private int idx = -1;
 
-        void push(int x);
+        void push(int x)
 
         {
             arr[idx] = x;
