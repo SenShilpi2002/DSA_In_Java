@@ -4,8 +4,8 @@ public class mainMergeSort {
 
 
     public static void display(int[] arr){
-        for(int val : arr){
-            System.out.print(val+" ");
+        for(int k=0;k<arr.length;k++){
+            System.out.print(arr[k]+" ");
         }
     }
 
