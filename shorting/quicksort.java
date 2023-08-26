@@ -2,21 +2,23 @@ import java.util.*;
 
 public class quicksort{
     public static void display(int [] arr){
-        // for(int i=0 ; i<arr.length ; i++){
-        //     System.out.print(arr[i]+" ");
-        // }
+         for(int i=0 ; i<arr.length ; i++){
+             System.out.print(arr[i]+" ");
+         }
 
     }
 
     public static void swap(int [] arr , int start , int pivotIndx){
-
+            int temp =arr[start];
+            arr[start]=arr[pivotIndx];
+            arr[pivotIndx]=temp;
     }
 
    public static int partition(int [] arr , int start , int end){
     int pivot = arr[start];
-
+    //let count the element which are lesser than pivot
     int count = 0;
-    for(int i=1 ; i<=end ; i++){
+    for(int i=start+1 ; i<=end ; i++){
         if(arr[i] <= pivot){
             count++;
         }
@@ -28,11 +30,11 @@ public class quicksort{
     int i = start;
     int j = end;
     while(i < pivotIdx && j > pivotIdx){
-       if(arr[i] <= pivotIdx){
+       while(arr[i] <= pivotIdx){
         i++;
        }
 
-       if(arr[j] >= pivotIdx){
+       while(arr[j] >= pivotIdx){
         j--;
        }
 
